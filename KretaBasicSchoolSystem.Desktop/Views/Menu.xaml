@@ -54,8 +54,10 @@
                             <TextBlock Text="Iskolapolgárok" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Style="{StaticResource menuButton}"
-                             Tag="{StaticResource colorMidleGreen}">
+                    <RadioButton 
+                        Style="{StaticResource menuButton}"
+                        Tag="{StaticResource colorMidleGreen}"
+                        Command="{Binding ShowSchoolClassesCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="ChalkboardUser" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Osztályok" Style="{StaticResource menuButtonText}"/>
