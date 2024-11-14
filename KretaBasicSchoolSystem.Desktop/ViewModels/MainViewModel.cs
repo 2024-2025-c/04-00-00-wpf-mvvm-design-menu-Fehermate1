@@ -4,6 +4,8 @@ using FontAwesome.Sharp;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
@@ -11,21 +13,28 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
     {
         private ControlPanelViewModel _controlPanelViewModel;
         private SchoolCitizensViewModel _schoolCitizensViewModel;
+        private SchoolClassesViewModel _schoolClassesViewModel;
+        private SchoolSubjectsViewModel _schoolSubjectsViewModel;
 
         public MainViewModel()
         {
             _controlPanelViewModel = new ControlPanelViewModel();
             _schoolCitizensViewModel = new SchoolCitizensViewModel();
+            _schoolClassesViewModel = new SchoolClassesViewModel();
+            _schoolSubjectsViewModel = new SchoolSubjectsViewModel();
         }
 
         public MainViewModel(
             ControlPanelViewModel controlPanelViewModel,
-            SchoolCitizensViewModel schoolCitizensViewModel 
+            SchoolCitizensViewModel schoolCitizensViewModel,
+            SchoolClassesViewModel schoolClassesViewModel,
+            SchoolSubjectsViewModel schoolSubjectsViewModel
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
             _schoolCitizensViewModel = schoolCitizensViewModel;
-
+            _schoolClassesViewModel = schoolClassesViewModel;
+            _schoolSubjectsViewModel = schoolSubjectsViewModel;
 
             CurrentChildView = _controlPanelViewModel;
             ShowDashbord();
@@ -54,6 +63,21 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Caption = "Iskolapolgárok";
             Icon = IconChar.UserGroup;
             CurrentChildView = _schoolCitizensViewModel;
+        }
+
+        [RelayCommand]
+        public void ShowSchoolClasses() 
+        {
+            Caption = "Osztályok";
+            Icon = IconChar.ChalkboardUser;
+            CurrentChildView = _schoolClassesViewModel;
+        }
+        [RelayCommand]
+        public void ShowSchoolSubjects()
+        {
+            Caption = "Tantárgyak";
+            Icon = IconChar.GraduationCap;
+            CurrentChildView = _schoolSubjectsViewModel;
         }
     }
 }
