@@ -3,12 +3,14 @@ using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Login;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
+using KretaBasicSchoolSystem.Desktop.ViewModels.Grades;
 using KretaBasicSchoolSystem.Desktop.Views;
 using KretaBasicSchoolSystem.Desktop.Views.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.Views.Login;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolClasses;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolSubjects;
+using KretaBasicSchoolSystem.Desktop.Views.Grades;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace KretaDesktop.Extensions
@@ -64,6 +66,13 @@ namespace KretaDesktop.Extensions
             services.AddSingleton<SchoolSubjectsView>(s => new SchoolSubjectsView()
             {
                 DataContext = s.GetRequiredService<SchoolSubjectsViewModel>()
+            });
+
+            //Grades
+            services.AddSingleton<GradesViewModel>();
+            services.AddSingleton<GradesView>(s => new GradesView()
+            {
+                DataContext = s.GetRequiredService<GradesViewModel>()
             });
 
         }

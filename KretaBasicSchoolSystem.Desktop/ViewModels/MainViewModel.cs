@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using FontAwesome.Sharp;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
+using KretaBasicSchoolSystem.Desktop.ViewModels.Grades;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
@@ -15,6 +16,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         private SchoolCitizensViewModel _schoolCitizensViewModel;
         private SchoolClassesViewModel _schoolClassesViewModel;
         private SchoolSubjectsViewModel _schoolSubjectsViewModel;
+        private GradesViewModel _gradesViewModel;
 
         public MainViewModel()
         {
@@ -22,19 +24,22 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             _schoolCitizensViewModel = new SchoolCitizensViewModel();
             _schoolClassesViewModel = new SchoolClassesViewModel();
             _schoolSubjectsViewModel = new SchoolSubjectsViewModel();
+            _gradesViewModel = new GradesViewModel();
         }
 
         public MainViewModel(
             ControlPanelViewModel controlPanelViewModel,
             SchoolCitizensViewModel schoolCitizensViewModel,
             SchoolClassesViewModel schoolClassesViewModel,
-            SchoolSubjectsViewModel schoolSubjectsViewModel
+            SchoolSubjectsViewModel schoolSubjectsViewModel,
+            GradesViewModel gradesViewModel
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
             _schoolCitizensViewModel = schoolCitizensViewModel;
             _schoolClassesViewModel = schoolClassesViewModel;
             _schoolSubjectsViewModel = schoolSubjectsViewModel;
+            _gradesViewModel = gradesViewModel;
 
             CurrentChildView = _controlPanelViewModel;
             ShowDashbord();
@@ -78,6 +83,13 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Caption = "Tantárgyak";
             Icon = IconChar.GraduationCap;
             CurrentChildView = _schoolSubjectsViewModel;
+        }
+        [RelayCommand]
+        public void ShowGrades()
+        {
+            Caption = "Osztályzatok";
+            Icon = IconChar.Grav;
+            CurrentChildView = _gradesViewModel;
         }
     }
 }
