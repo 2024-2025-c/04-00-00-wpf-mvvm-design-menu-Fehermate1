@@ -17,7 +17,7 @@ namespace KretaBasicSchoolSystem.Desktop.Views.Grades
     /// <summary>
     /// Interaction logic for GradesView.xaml
     /// </summary>
-    public partial class GradesView : Window
+    public partial class GradesView : UserControl
     {
         public GradesView()
         {
