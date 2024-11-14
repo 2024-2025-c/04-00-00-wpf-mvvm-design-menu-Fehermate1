@@ -2,7 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 
-namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
+namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects
 {
     public partial class SchoolSubjectsViewModel : BaseViewModel
     {

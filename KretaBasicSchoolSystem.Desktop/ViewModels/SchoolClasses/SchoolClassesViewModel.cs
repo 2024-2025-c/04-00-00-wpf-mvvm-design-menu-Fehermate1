@@ -2,7 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 
-namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
+namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses
 {
     public partial class SchoolClassesViewModel : BaseViewModel
     {
@@ -18,7 +18,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
         {
             _schoolClassesViewModel = SchoolClassesViewModel;
 
-            _currentSchoolClassesChildView = new StudentViewModel();
+            _currentSchoolClassesChildView = new SchoolClassesViewModel();
         }
 
         [ObservableProperty]
