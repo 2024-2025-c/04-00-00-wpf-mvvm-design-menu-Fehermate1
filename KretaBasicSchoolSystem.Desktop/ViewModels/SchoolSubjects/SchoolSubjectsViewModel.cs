@@ -27,7 +27,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects
         [RelayCommand]
         public void ShowSchoolSubjectsView()
         {
-            _currentSchoolSubjectsChildView = _schoolSubjectsViewModel;
+            CurrentSchoolSubjectsChildView = _schoolSubjectsViewModel;
         }
     }
 }

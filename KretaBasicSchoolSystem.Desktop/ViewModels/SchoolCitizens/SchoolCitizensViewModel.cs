@@ -27,7 +27,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
         [RelayCommand]
         public void ShowSchoolCitizensView()
         {
-            _currentSchoolCitizensChildView = _schoolCitizenViewModel;
+            CurrentSchoolCitizensChildView = _schoolCitizenViewModel;
         }
     }
 }

@@ -39,7 +39,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.Grades
         [RelayCommand]
         public void ShowGradesView()
         {
-            _currentGradesChildView = _gradesViewModel;
+            CurrentGradesChildView = _gradesViewModel;
         }
     }
 }
