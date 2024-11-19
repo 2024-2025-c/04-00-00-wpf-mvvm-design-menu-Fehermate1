@@ -2,7 +2,7 @@
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels.Base
 {
-    public  abstract class BaseViewModel : ObservableObject
+    public abstract class BaseViewModel : ObservableObject
     {
     }
 }
