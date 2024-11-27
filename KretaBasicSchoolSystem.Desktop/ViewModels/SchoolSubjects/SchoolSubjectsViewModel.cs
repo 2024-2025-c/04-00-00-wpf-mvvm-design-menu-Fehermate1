@@ -6,6 +6,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects
 {
     public partial class SchoolSubjectsViewModel : BaseViewModel
     {
+       /*
         private SchoolSubjectsViewModel _schoolSubjectsViewModel;
 
         public SchoolSubjectsViewModel()
@@ -28,6 +29,6 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects
         public void ShowSchoolSubjectsView()
         {
             CurrentSchoolSubjectsChildView = _schoolSubjectsViewModel;
-        }
+        }*/
     }
 }

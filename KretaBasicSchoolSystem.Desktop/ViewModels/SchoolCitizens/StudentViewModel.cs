@@ -1,8 +1,10 @@
-﻿using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
 {
-    public class StudentViewModel : BaseViewModel
+    public partial class StudentViewModel : BaseViewModel
     {
+
     }
 }

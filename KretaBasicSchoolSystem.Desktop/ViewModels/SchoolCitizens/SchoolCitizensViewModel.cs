@@ -6,19 +6,20 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
 {
     public partial class SchoolCitizensViewModel : BaseViewModel
     {
-        private SchoolCitizensViewModel _schoolCitizenViewModel;
+        /*
+        //private SchoolCitizensViewModel _schoolCitizenViewModel;
 
         public SchoolCitizensViewModel()
         {
-            _currentSchoolCitizensChildView = new SchoolCitizensViewModel();
-            _schoolCitizenViewModel = new SchoolCitizensViewModel();
+            //_currentSchoolCitizensChildView = new SchoolCitizensViewModel();
+            //_schoolCitizenViewModel = new SchoolCitizensViewModel();
         }
 
-        public SchoolCitizensViewModel(SchoolCitizensViewModel schoolCitizensViewModel)
+        public SchoolCitizensViewModel()
         {
-            _schoolCitizenViewModel = new SchoolCitizensViewModel();
+            //_schoolCitizenViewModel = new SchoolCitizensViewModel();
 
-            _currentSchoolCitizensChildView= new SchoolCitizensViewModel();
+            //_currentSchoolCitizensChildView= new SchoolCitizensViewModel();
         }
 
         [ObservableProperty]
@@ -27,7 +28,8 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
         [RelayCommand]
         public void ShowSchoolCitizensView()
         {
-            CurrentSchoolCitizensChildView = _schoolCitizenViewModel;
+            //CurrentSchoolCitizensChildView = _schoolCitizenViewModel;
         }
+        */
     }
 }

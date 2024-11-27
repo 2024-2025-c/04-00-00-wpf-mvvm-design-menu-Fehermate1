@@ -15,31 +15,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels.Grades
 {
     public partial class GradesViewModel : BaseViewModel
     {
-        private GradesViewModel _gradesViewModel;
+        private TaughtClassesViewModel _taughtClassesViewModel;
+        private EndOfSemester _EndOfSemester;
+        private EndOfYearViewModel _EndOfOfYearViewModel;
+        private CurrentLessonViewModel _CurrentLessonViewModel;
 
         public GradesViewModel()
         {
-            _currentGradesChildView = new GradesViewModel();
-            _gradesViewModel = new GradesViewModel();
-        }
-        public GradesViewModel(GradesViewModel gradesViewModel)
-        {
-            _gradesViewModel = gradesViewModel;
-
-            _currentGradesChildView = new GradesViewModel();
-        }
-        [ObservableProperty]
-        private BaseViewModel _currentGradesChildView;
-
-        [RelayCommand]
-        public void ShowGradesView()
-        {
-            CurrentGradesChildView = _gradesViewModel;
+            //_currentGradesChildView = new CurrentLessonViewModel();
         }
     }
 }
