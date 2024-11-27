@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels.Grades
 {
-    public partial class EndOfSemester
+    public partial class EndOfSemesterVIewModel
     {
     }
 }

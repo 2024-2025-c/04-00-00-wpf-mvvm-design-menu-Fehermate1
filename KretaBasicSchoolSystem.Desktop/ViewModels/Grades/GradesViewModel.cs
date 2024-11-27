@@ -15,20 +15,64 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
-using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels.Grades
 {
     public partial class GradesViewModel : BaseViewModel
     {
         private TaughtClassesViewModel _taughtClassesViewModel;
-        private EndOfSemester _EndOfSemester;
-        private EndOfYearViewModel _EndOfOfYearViewModel;
-        private CurrentLessonViewModel _CurrentLessonViewModel;
+        private EndOfSemesterVIewModel _endOfSemesterViewModel;
+        private EndOfYearViewModel _endOfYearViewModel;
+        private CurrentLessonViewModel _currentLessonViewModel;
 
         public GradesViewModel()
         {
-            _currentGradesChildView = new CurrentLessonViewModel();
+            _currentLessonViewModel = new CurrentLessonViewModel();
+            _endOfYearViewModel = new EndOfYearViewModel();
+            _endOfSemesterViewModel = new EndOfSemesterVIewModel();
+            _taughtClassesViewModel = new TaughtClassesViewModel();
+        }
+
+        public GradesViewModel(CurrentLessonViewModel currentLessonViewModel, EndOfYearViewModel endOfYearViewModel, EndOfSemesterVIewModel endOfSemesterViewModel, TaughtClassesViewModel taughtClassesViewModel)
+        {
+            _currentLessonViewModel = currentLessonViewModel;
+            _endOfYearViewModel = endOfYearViewModel;
+            _endOfSemesterViewModel = endOfSemesterViewModel;
+            _taughtClassesViewModel = taughtClassesViewModel;
+
+            _currentLessonViewModel = new CurrentLessonViewModel();
+            _endOfYearViewModel = new EndOfYearViewModel();
+            _endOfSemesterViewModel = new EndOfSemesterVIewModel();
+            _taughtClassesViewModel = new TaughtClassesViewModel();
+        }
+
+        [ObservableProperty]
+        private BaseViewModel? _currentGradesChildView;
+
+        [RelayCommand]
+        public void ShowCurrentLessonView()
+        {
+            CurrentGradesChildView = _currentLessonViewModel;
+        }
+        [RelayCommand]
+
+        public void ShowEndofSemesterView()
+        {
+            CurrentGradesChildView = _endOfSemesterViewModel;
+        }
+
+        [RelayCommand]
+
+        public void ShowEndOfYearView()
+        {
+            CurrentGradesChildView = _endOfYearViewModel;
+        }
+
+        [RelayCommand]
+
+        public void ShowTaughtClassesView()
+        {
+            CurrentGradesChildView = _taughtClassesViewModel;
         }
     }
 }

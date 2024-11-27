@@ -29,4 +29,16 @@
     <DataTemplate DataType="{x:Type gradesViewModels:GradesViewModel}">
         <gradesView:GradesView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type gradesViewModels:CurrentLessonViewModel}">
+        <gradesView:CurrentLessonView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type gradesViewModels:EndOfYearViewModel}">
+        <gradesView:EndOfYearView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type gradesViewModels:EndOfSemesterVIewModel}">
+        <gradesView:EndOfSemesterView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type gradesViewModels:TaughtClassesViewModel}">
+        <gradesView:TaughtClassesView/>
+    </DataTemplate>
 </ResourceDictionary>
