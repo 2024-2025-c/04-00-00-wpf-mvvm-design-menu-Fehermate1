@@ -28,7 +28,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels.Grades
 
         public GradesViewModel()
         {
-            //_currentGradesChildView = new CurrentLessonViewModel();
+            _currentGradesChildView = new CurrentLessonViewModel();
         }
     }
 }
